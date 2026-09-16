@@ -1,1 +1,93 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mo7aRz | Minecraft Projects</title><link rel="stylesheet" href="style.css"></head><body><header><b>Mo7aRz<span>.</span></b><nav><a href="#home">Home</a><a href="#projects">Projects</a><a href="#about">About</a></nav></header><main><section id="home" class="hero"><small>MINECRAFT • MODPACKS • TWEAKS</small><h1>My Minecraft<br><em>Projects.</em></h1><p>A collection of my Minecraft modpacks and tweaks, built for a smoother and better gameplay experience.</p><a class="btn" href="#projects">Explore Projects ↓</a></section><section id="projects"><div class="head"><div><small>PROJECTS</small><h2>Latest releases</h2></div><label>02 PROJECTS</label></div><div class="grid"><article><div class="icon">⚔</div><small>MODPACK</small><h3>PvP Modpack 26.2</h3><p>A PvP-focused Minecraft 26.2 modpack designed around performance, responsiveness and a clean competitive experience.</p><div class="meta"><span>Minecraft 26.2</span><span>v1.0</span></div><a class="download" href="https://www.mediafire.com/file/immq9us68wbnwc0/26.2.mrpack/file" target="_blank">Download ↗</a></article><article><div class="icon">⚙</div><small>TWEAKS</small><h3>Mo7aRz TWEAKS V1.5</h3><p>A ready-to-use collection of Minecraft tweaks and adjustments, made to save time and give you a cleaner setup.</p><div class="meta"><span>V1.5</span><span>RAR</span></div><a class="download" href="https://www.mediafire.com/file/3xwb96zoto0zgua/Mo7aRz_TWEAKS_V1.5.rar/file" target="_blank">Download ↗</a></article></div></section><section id="about" class="about"><small>ABOUT</small><h2>Built by Mo7aRz.</h2><p>This website is the home for my Minecraft projects. More modpacks, tweaks and updates will be added over time.</p></section></main><footer>© 2026 Mo7aRz • Minecraft Projects</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mo7aRz | Minecraft Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <b>MO7aRz<span>.</span></b>
+        <nav>
+            <!-- زر التبديل قبل Home على اليسار -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <small>MINECRAFT • MODPACKS • TWEAKS</small>
+            <h1>My Minecraft<br><em>Projects.</em></h1>
+            <p>A collection of my Minecraft modpacks and tweaks, built for a smoother and better gameplay experience.</p>
+            <a class="btn" href="#projects">Explore Projects ↓</a>
+        </section>
+
+        <section id="projects">
+            <div class="head">
+                <div>
+                    <small>PROJECTS</small>
+                    <h2>Latest releases</h2>
+                </div>
+                <label>02 PROJECTS</label>
+            </div>
+            <div class="grid">
+                <article>
+                    <div class="icon">⚔</div>
+                    <small>MODPACK</small>
+                    <h3>PvP Modpack 26.2</h3>
+                    <p>A PvP-focused Minecraft 26.2 modpack designed around performance, responsiveness and a clean competitive experience.</p>
+                    <div class="meta"><span>Minecraft 26.2</span><span>v1.0</span></div>
+                    <a class="download" href="https://www.mediafire.com/file/immq9us68wbnwc0/26.2.mrpack/file" target="_blank">Download ↗</a>
+                </article>
+                <article>
+                    <div class="icon">⚙</div>
+                    <small>TWEAKS</small>
+                    <h3>Mo7aRz TWEAKS V1.5</h3>
+                    <p>A ready-to-use collection of Minecraft tweaks and adjustments, made to save time and give you a cleaner setup.</p>
+                    <div class="meta"><span>V1.5</span><span>RAR</span></div>
+                    <a class="download" href="https://www.mediafire.com/file/3xwb96zoto0zgua/Mo7aRz_TWEAKS_V1.5.rar/file" target="_blank">Download ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <small>ABOUT</small>
+            <h2>Built by Mo7aRz.</h2>
+            <p>This website is the home for my Minecraft projects. More modpacks, tweaks and updates will be added over time.</p>
+        </section>
+    </main>
+
+    <footer>© 2026 Mo7aRz • Minecraft Projects</footer>
+
+    <!-- سكربت التبديل وحفظ الوضع -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                themeToggleBtn.textContent = '☀️';
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            let theme = 'dark-mode';
+
+            if (document.body.classList.contains('light-mode')) {
+                theme = 'light-mode';
+                themeToggleBtn.textContent = '☀️';
+            } else {
+                themeToggleBtn.textContent = '🌙';
+            }
+
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>
